@@ -9,7 +9,7 @@ Special symbols:
 	- <reserved_words> ::= "array" | "char" | "const" | "do" | "else" | "check" | "int" | "of" | "program" | "then" | "while" | "for"
 
 Identifiers:
-	<identifier> ::= <letter> | <letter><letter> | <letter><digit>| <letter><letter><digit>
+	<identifier> ::= <letter> | <identifier><letter> | <identifier><digit>| <identifier><letter><digit>
 	<letter> ::= "A" | "B" | ... | "Z" | "a" | "b" | ... | "z"
 	<digit> ::= "0" | "1" | ... | "9"
 
