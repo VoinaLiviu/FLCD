@@ -1,0 +1,59 @@
+//p1
+
+let number1 = input()
+let number2 = input()
+let number3 = input()
+let max = 0
+
+check (number1 > number2) then
+	max = number1
+else 
+	max = number2	
+check (number3 > max) then		
+	max = number3
+
+print("%d is the maximum", max)
+
+//p2
+
+let number = input()
+
+let d = 2
+let isPrime = true
+
+while ( d < number/2) then
+	check (number % d == 0) then
+		isPrime = false
+		d = number
+	d = d + 1
+
+check (isPrime == true) then
+	print("number is prime")
+else
+	print("number is not prime")
+
+//p3
+
+let list = input()
+let sum = 0
+
+for number in list do
+	sum = sum + number
+
+print("The sum is %d", sum)
+
+//p1err
+
+let 1number = input() //error!!!
+let number2 = input()
+let number3 = input()
+let max = 0
+
+check (number1 > number2) then
+	max = number1
+else 
+	max = number2	
+check (number3 > max) then		
+	max = number3
+
+print("%d is the maximum, max) //error!!!

@@ -1,0 +1,26 @@
+Syntax:
+	<program> ::= <decllist> ";" <cmpdstmt>
+	<decllist> ::= <declaration> | <declaration> ";" <decllist>
+	<declaration> ::= <type> IDENTIFIER 
+	<type1> ::= "bool" | "char" | "int" | "float" | "string"
+	<arraydecl> ::= <type1> "[" nr "]"
+	<type> ::= <type1> | <arraydecl>
+	<cmpdstmt> ::= <stmtlist>
+	<stmtlist> ::= <stmt> | <stmt> ";" <stmtlist>
+	<stmt> ::= <simplstmt> | <structstmt>
+	<simplstmt> ::= <assignstmt> | <iostmt>
+	<assignstmt> ::= IDENTIFIER "=" <expression>
+	<expression> ::= <expression> "+" <term> | <term>
+	<term> ::= <term> "*" <factor> | <factor>
+	<factor> ::= "(" <expression> ")" | IDENTIFIER
+	<iostmt> ::= "read" "(" IDENTIFIER ")" | "write" "(" IDENTIFIER ")" 
+	<structstmt> ::= <cmpdstmt> | <ifstmt> | <whilestmt> 
+	<ifstmt> ::= "if" <condition> "then" <stmt> | "if" <condition> "then" <stmt> "else" <stmt>
+	<whilestmt> ::= "while" <condition> "do" <stmt>
+	<forstmt> ::= "for" "(" <begin> ";" <end> ";" <step> ")" "do" <stmt>
+	<begin> ::= <integer>
+	<end> ::= <integer>
+	<step> ::= <integer>
+	<integer> ::= "0" | "1" | "2"| ...
+	<condition> ::= <expression> <relation> <expression>
+	<relation> ::= "<" | "<=" | "=" | "!=" | ">=" | ">"

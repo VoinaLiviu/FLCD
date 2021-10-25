@@ -1,0 +1,30 @@
+Alphabet: 
+	a. Upper (A-Z) and lower (a-z) case letters of the English alphabet
+	b. Underline character (_)
+	c. Decimal digits (0-9)
+
+Special symbols:
+	- <operators> ::= "+" | "-" | "*" | "/" | "<" | "<=" | "=" | ">="
+	- <separators> ::= "[" | "]" | "{" | "}" | ":" | ";" | " " 
+	- <reserved_words> ::= "array" | "char" | "const" | "do" | "else" | "check" | "int" | "of" | "program" | "then" | "while" | "for"
+
+Identifiers:
+	<identifier> ::= <letter> | <letter><letter> | <letter><digit>| <letter><letter><digit>
+	<letter> ::= "A" | "B" | ... | "Z" | "a" | "b" | ... | "z"
+	<digit> ::= "0" | "1" | ... | "9"
+
+Constants:
+	integer:	
+		<noconst> ::= "+" <no> | "-" <no> | <no>
+		<no> ::= <non_zero><digit> | <non_zero>
+		<non_zero> ::= "1" | "2" | ... | "9"
+
+	character:
+		<character> ::= "'" <letter> "'" | "'" <digit> "'"
+	
+	string:
+		<string> ::= """ <charString> """
+		<charString> ::= <char> | <char><charString>
+		<char> ::= <letter> | <digit>
+		
+ 
