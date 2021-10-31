@@ -1,0 +1,42 @@
+https://github.com/VoinaLiviu/FLCD
+
+Node:
+    * class for representing the nodes of a BST
+
+    * attributes:
+        value -> the value that the node contains
+        left  -> the node on the left
+        right -> the node on the right
+
+    * methods:
+        getValue -> gets the value from the node
+        getLeft  -> gets the node from the left
+        getRight -> gets the node from the right
+        setValue -> sets the value from the node
+        setLeft  -> sets the node from the left
+        setRight -> sets the node from the right
+
+BST:
+    * class for representing a Binary Search Tree
+
+    * attributes:
+        root -> the root of the tree (the node on top of the tree)
+
+    * methods:
+        insert              -> inserts a value into the BST based on the standard BST rules
+        search              -> searches a value into the BST
+        printAlphabetically -> prints all the values from the BST in alphabetical order
+        print               -> wrapper method for printAlphabetically
+
+SymbolTable:
+    * class for representing a symbol table
+
+    * attributes:
+        bst      -> the Binary Search Tree in which the symbol table values are going to be stored
+        position -> the last position from the symbol table (initialized with 0)
+
+    * methods:
+        add       -> adds a value to the symbol table
+        alreadyIn -> verifies if a value already exists in the symbol table
+        search    -> searches a value in the symbol table
+        print     -> prints the values from the symbol table
