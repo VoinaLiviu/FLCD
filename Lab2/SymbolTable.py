@@ -1,5 +1,6 @@
 from BST import BST
 
+
 class SymbolTable:
     def __init__(self):
         self.bst = BST()
@@ -34,4 +35,4 @@ if __name__ == "__main__":
 
     symbolTable.print()
 
-    #positie,
+    #positie

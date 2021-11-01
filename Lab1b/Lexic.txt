@@ -16,7 +16,7 @@ Identifiers:
 Constants:
 	integer:	
 		<noconst> ::= "+" <no> | "-" <no> | <no>
-		<no> ::= <non_zero><digit> | <non_zero>
+		<no> ::= <non_zero><digit> | <no><digit> | <non_zero>
 		<non_zero> ::= "1" | "2" | ... | "9"
 
 	character:
