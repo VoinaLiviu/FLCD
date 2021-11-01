@@ -3,12 +3,12 @@ number2 = input()
 number3 = input()
 max = 0
 
-if (number1 > number2) then
+if ( number1 > number2 ) then
     max = number1
 else
     max = number2
 
-if (number3 > max) then
+if ( number3 > max ) then
     max = number3
 
-print(max + "is the maximum")
+print( max + " is the maximum " )
