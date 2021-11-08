@@ -18,6 +18,10 @@ class SymbolTable:
     def search(self, identifier):
         return self.bst.search(str(identifier))
 
+    def searchPosition(self, identifier):
+        pair = self.bst.search(identifier)
+        return pair[0]
+
     def print(self):
         self.bst.print()
 
@@ -34,5 +38,4 @@ if __name__ == "__main__":
     symbolTable.add("g")
 
     symbolTable.print()
-
-    #positie
+    print(symbolTable.search("a"))

@@ -1,0 +1,47 @@
+number1 0
+id 0
+input 0
+
+ 0
+number2 0
+id 0
+input 0
+
+ 0
+number3 0
+id 0
+input 0
+
+ 0
+max 0
+id 0
+id None
+
+ 0
+if 0
+number1 0
+id None
+number2 0
+then
+ 0
+max 0
+id 0
+number1
+ 0
+else
+ 0
+max 0
+id 0
+number2
+ 0
+
+ 0
+if 0
+number3 0
+id None
+max 0
+then
+ 0
+max 0
+id 0
+number3 0
