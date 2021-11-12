@@ -10,3 +10,5 @@ else
 
 if (number3 > max) then
     max = number3
+
+print...

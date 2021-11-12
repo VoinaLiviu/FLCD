@@ -1,4 +1,4 @@
-class FiniteAutomaton:
+class FiniteAutomata:
     def __init__(self):
         self.__states = []
         self.__alphabet=[]
@@ -16,15 +16,18 @@ class FiniteAutomaton:
         self.__initialState=lines[3]
         self.__finalStates=lines[4].split()
 
-    def printStates(self):
-        print(self.__states)
+    def getStates(self):
+        return self.__states
 
-if __name__=="__main__":
-    fa = FiniteAutomaton()
-    fa.readFile("fa.in")
-    fa.printStates()
+    def getAlphabet(self):
+        return self.__alphabet
 
-    while True:
-        print("\tMenu:")
-        print("1.Print states")
+    def getTransitions(self):
+        return self.__transitions
+
+    def getInitialState(self):
+        return self.__initialState
+
+    def getFinalStates(self):
+        return self.__finalStates
 
