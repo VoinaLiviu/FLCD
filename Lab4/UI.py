@@ -31,6 +31,18 @@ class UI:
 
         print(printedString)
 
+    def printTransitions(self):
+        transitions = self.__finiteAutomata.getTransitions()
+        print("The finite automata's transitions are:")
+        for transition in transitions:
+            splittedTransition = transition.split()
+            transitionString = splittedTransition[0]
+            transitionString+=" -"
+            transitionString+=splittedTransition[1]
+            transitionString+="-> "
+            transitionString+=splittedTransition[2]
+            print("\t", transitionString)
+
     def printInitialState(self):
         initialState = self.__finiteAutomata.getInitialState()
 
@@ -40,7 +52,7 @@ class UI:
         finalStates = self.__finiteAutomata.getFinalStates()
         printedString = "The finite automata's final states are:"
         for state in finalStates:
-            printedString+=" "
-            printedString+=state
+            printedString += " "
+            printedString += state
 
         print(printedString)

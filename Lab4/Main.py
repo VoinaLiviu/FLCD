@@ -16,7 +16,7 @@ if __name__ == "__main__":
         elif choice == 2:
             ui.printAlphabet()
         elif choice == 3:
-            pass
+            ui.printTransitions()
         elif choice == 4:
             ui.printInitialState()
         elif choice==5:
