@@ -12,8 +12,10 @@ class FiniteAutomata:
 
         self.__states = lines[0].split()
         self.__alphabet = lines[1].split()
-        self.__transitions = lines[2].split(';')
-        self.__initialState = lines[3]
+        fileTransitions = lines[2].split(';')
+        for fileTransition in fileTransitions:
+            self.__transitions.append(fileTransition.split())
+        self.__initialState = lines[3][0:2]
         self.__finalStates = lines[4].split()
 
     def getStates(self):
@@ -30,3 +32,28 @@ class FiniteAutomata:
 
     def getFinalStates(self):
         return self.__finalStates
+
+    def checkSequence(self, sequence):
+        alphabet = self.getAlphabet()
+        transitions = self.getTransitions()
+        currentState = self.getInitialState()
+
+        for element in sequence:
+            if element not in alphabet:
+                print("Element not from the alphabet!")
+                return False
+            nextState = "default"
+            for transition in transitions:
+                if transition[0] == currentState and transition[1] == element:
+                    nextState = transition[2]
+                    break
+            if nextState != "default":
+                currentState = nextState
+            else:
+                print("Invalid transition!")
+                return False
+
+        if currentState in self.getFinalStates():
+            return True
+        else:
+            return False

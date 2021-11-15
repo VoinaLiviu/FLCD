@@ -21,5 +21,7 @@ if __name__ == "__main__":
             ui.printInitialState()
         elif choice==5:
             ui.printFinalStates()
+        elif choice==6:
+            ui.checkSequence()
         else:
             print("Invalid choice! Check the menu!")

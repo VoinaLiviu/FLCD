@@ -9,6 +9,7 @@ class UI:
         print("3. Print transitions")
         print("4. Print initial state")
         print("5. Print final states")
+        print("6. Check a sequence")
         print("0. Exit")
 
     def printStates(self):
@@ -35,13 +36,13 @@ class UI:
         transitions = self.__finiteAutomata.getTransitions()
         print("The finite automata's transitions are:")
         for transition in transitions:
-            splittedTransition = transition.split()
-            transitionString = splittedTransition[0]
-            transitionString+=" -"
-            transitionString+=splittedTransition[1]
-            transitionString+="-> "
-            transitionString+=splittedTransition[2]
+            transitionString = transition[0]
+            transitionString += " -"
+            transitionString += transition[1]
+            transitionString += "-> "
+            transitionString += transition[2]
             print("\t", transitionString)
+
 
     def printInitialState(self):
         initialState = self.__finiteAutomata.getInitialState()
@@ -56,3 +57,11 @@ class UI:
             printedString += state
 
         print(printedString)
+
+    def checkSequence(self):
+        sequence = input("Enter the sequence: ")
+        result = self.__finiteAutomata.checkSequence(sequence)
+        if result == True:
+            print("The sequence is accepted by the DFA")
+        else:
+            print("The sequence is not accepted by the DFA")
