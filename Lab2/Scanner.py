@@ -1,8 +1,6 @@
 from SymbolTable import SymbolTable
 import re
 
-
-# 0.5p
 class Scanner:
     def __init__(self):
         self.__symbolTable = SymbolTable()

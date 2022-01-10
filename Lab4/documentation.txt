@@ -1,0 +1,12 @@
+https://github.com/VoinaLiviu/FLCD
+
+Scanner:
+	* class used to read a program and categorize all its tokens
+
+	* attributes: 
+		symbolTable -> an object of type SymbolTable, described in lab 2, used to store identifiers and constants
+		pif 	    -> a list of all the pairs from the Program Internal Form
+		keywords    -> a list of all the reserved keywords in my language  
+		operators   -> 
+		
+		

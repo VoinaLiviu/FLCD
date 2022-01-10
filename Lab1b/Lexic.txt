@@ -4,7 +4,7 @@ Alphabet:
 	c. Decimal digits (0-9)
 
 Special symbols:
-	- <operators> ::= "+" | "-" | "*" | "/" | "<" | "<=" | "=" | ">="
+	- <operators> ::= "+" | "-" | "*" | "/" | "<" | "<=" | "=" | ">=" | ">"
 	- <separators> ::= "[" | "]" | "{" | "}" | ":" | ";" | " " 
 	- <reserved_words> ::= "array" | "char" | "const" | "do" | "else" | "check" | "int" | "of" | "program" | "then" | "while" | "for"
 

@@ -1,0 +1,42 @@
+%{
+#include <stdio.h>
+%}
+
+DIGIT [0-9]
+CHARACTER \'[a-zA-Z0-9]\'
+STRING \"[a-zA-Z0-9]*\"
+INTEGER [+-]?[1-9][0-9]*|0
+CONST {STRING}|{NUMBER}|{CHARACTER}
+
+%%
+
+array printf( "Reserved word: %s\n", yytext);
+char printf( "Reserved word: %s\n", yytext);
+const printf( "Reserved word: %s\n", yytext);
+do printf( "Reserved word: %s\n", yytext);
+else printf( "Reserved word: %s\n", yytext);
+check printf( "Reserved word: %s\n", yytext);
+int printf( "Reserved word: %s\n", yytext);
+of printf( "Reserved word: %s\n", yytext);
+program printf( "Reserved word: %s\n", yytext);
+then printf( "Reserved word: %s\n", yytext);
+while printf( "Reserved word: %s\n", yytext);
+for printf( "Reserved word: %s\n", yytext);
++ printf("Operator: %s\n", yytext);
+- printf("Operator: %s\n", yytext);
+* printf("Operator: %s\n", yytext);
+/ printf("Operator: %s\n", yytext);
+< printf("Operator: %s\n", yytext);
+<= printf("Operator: %s\n", yytext);
+= printf("Operator: %s\n", yytext);
+>= printf("Operator: %s\n", yytext);
+> printf("Operator: %s\n", yytext);
+[ printf("Separator: %s\n", yytext);
+] printf("Separator: %s\n", yytext);
+{ printf("Separator: %s\n", yytext);
+} printf("Separator: %s\n", yytext);
+: printf("Separator: %s\n", yytext);
+; printf("Separator: %s\n", yytext);
+{CONST} printf("Constant: %s\n", yytext);
+
+%%
